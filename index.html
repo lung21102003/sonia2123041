@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    .extra-img {
+      width: 120px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+
+    .navbar {
+      background-color: #1c1f23;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link,
+    footer p {
+      color: #cccccc !important;
+      font-size: 1rem;
+    }
+
+    .nav-link:hover {
+      color: #2c55fa !important;
+      text-decoration: underline;
+    }
+
+    .extra-img.show {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.05);
+    }
+
+    #left-pic {
+      left: 5%;
+    }
+
+    #right-pic {
+      right: 5%;
+    }
+
+    .bg-profile-img {
+      position: absolute;
+      top: -20%;
+      left: -10%;
+      width: 120%;
+      height: 162%;
+      object-fit: cover;
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    header {
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+      background-color: #fff;
+      color: #000;
+    }
+
+    header .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .bottom-section {
+      background-color: #181919;
+      color: white;
+    }
+
+    /* ✅ Foto Profil Bulat Sempurna */
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Website Portofolio</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang Saya</a></li>
+          <li class="nav-item"><a class="nav-link" href="Galery.html">Galery</a></li>
+          <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="Sertifikat.html">Sertifikat</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="text-center py-5 position-relative">
+    <div class="container" data-aos="fade-up">
+      <img src="backgrounds.jpg" class="bg-profile-img">
+      
+      <!-- ✅ FOTO PROFIL BULAT -->
+      <img id="profile-pic" src="profil (2).jpg" alt="Foto Profil Sonia Marcelya Djara" class="mb-3 profile-img">
+      
+      <h1 class="display-4 fw-bold">SONIA MARCELYA DJARA</h1>
+      <p class="lead">Profesi Anda - Web Developer / Designer / etc.</p>
+    </div>
+
+    <img id="left-pic" src="left-img.jpg" class="extra-img" alt="Left Image">
+    <img id="right-pic" src="right-img.jpg" class="extra-img" alt="Right Image">
+  </header>
+
+  <!-- SECTION BAWAH -->
+  <section class="p-5 bottom-section">
+    <div class="container text-center" data-aos="fade-up" data-aos-delay="100" data-aos-offset="0" data-aos-anchor-placement="top-bottom">
+      <p class="lead">
+        Selamat datang di website portofolio pribadi saya. Di sini Anda dapat melihat proyek-proyek saya, membaca blog, serta mengetahui lebih lanjut tentang saya dan cara menghubungi saya.
+      </p>
+    </div>
+  </section>
+
+  <!-- SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const profilePic = document.getElementById("profile-pic");
+    const leftPic = document.getElementById("left-pic");
+    const rightPic = document.getElementById("right-pic");
+
+    let visible = false;
+    profilePic.addEventListener("click", () => {
+      visible = !visible;
+      leftPic.classList.toggle("show", visible);
+      rightPic.classList.toggle("show", visible);
+    });
+  </script>
+</body>
+</html>

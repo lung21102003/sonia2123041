@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tentang Saya</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-image: url("backgrounds.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #ffffff;
+      position: relative;
+      z-index: 1;
+      font-size: 0.9rem;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    .navbar {
+      background-color: #1c1f23;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link,
+    footer p {
+      color: #cccccc !important;
+      font-size: 1rem;
+    }
+
+    .nav-link:hover {
+      color: #2c55fa !important;
+      text-decoration: underline;
+    }
+
+    .container {
+      background-color: transparent;
+    }
+
+    table.table {
+      background-color: transparent;
+      font-size: 0.85rem;
+    }
+
+    table th,
+    table td {
+      color: rgb(241, 241, 241);
+      padding: 4px 8px;
+    }
+
+    .section-box {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    .list-group-item {
+      background-color: rgba(33, 37, 41, 0.8);
+      color: #ffffff;
+      border: 1px solid #444;
+      padding: 6px 10px;
+      font-size: 0.85rem;
+    }
+
+    .table-responsive {
+      border-radius: 10px !important;
+    }
+
+    h2, h3 {
+      font-size: 1.5rem;
+    }
+
+    /* Gaya gambar profil lingkaran sempurna */
+    .profil-img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    /* === Animasi CSS === */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .zoom-in {
+      opacity: 0;
+      animation: zoomIn 1s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.3s; }
+    .delay-2 { animation-delay: 0.6s; }
+    .delay-3 { animation-delay: 0.9s; }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Website Portofolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">Tentang Saya</a></li>
+          <li class="nav-item"><a class="nav-link" href="Galery.html">Galery</a></li>
+          <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="Sertifikat.html">Sertifikat</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Biodata -->
+  <section class="p-4">
+    <div class="container section-box fade-in-up">
+      <h2 class="text-center mb-3">Tentang Saya</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="profil (2).jpg" alt="Sonia Marcelya Njara"
+            class="profil-img mb-2 zoom-in delay-1" />
+        </div>
+        <div class="col-md-8 fade-in-up delay-2">
+          <div class="table-responsive">
+            <table class="table bg-dark">
+              <tbody>
+                <tr><th>Nama</th><td>Sonia Marcelya Djara</td></tr>
+                <tr><th>Tempat, Tanggal Lahir</th><td>Melolo, 14 Desember 2004</td></tr>
+                <tr><th>Alamat</th><td>Jln. Laimanggi No04</td></tr>
+                <tr><th>Email</th><td>Soniadjara8@gmail.com</td></tr>
+                <tr><th>Telepon</th><td>085337077220</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pendidikan -->
+  <section class="p-4">
+    <div class="container section-box fade-in-up delay-3">
+      <h3 class="mb-3">Pendidikan</h3>
+      <ul class="list-group">
+        <li class="list-group-item">S1 Teknik Informatika – UKW Sumba (2023–sekarang)</li>
+        <li class="list-group-item">SMA N1 Rindi Umalulu – IBB (2020–2023)</li>
+        <li class="list-group-item">SMP N1 Umalulu (2016–2020)</li>
+        <li class="list-group-item">SD Kandamboku (2010–2016)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-2 mt-4">
+    <p class="mb-0" style="font-size: 0.8rem;">&copy; 2025 Soniadjara8. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: #1c1f23;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link,
+    footer p {
+      color: #cccccc !important;
+      font-size: 1rem;
+    }
+    .nav-link:hover {
+      color: #2c55fa !important;
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .card {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+      transition: transform 0.3s ease-in-out;
+      /* Ensure cards themselves are flex containers to utilize h-100 properly */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card a {
+      color: #0dcaf0;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 200px; /* Set a fixed height for consistency */
+        object-fit: cover; /* This will make images cover the area without distortion */
+    }
+
+    /* Additional style for card body to align "Lihat Demo" links */
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* This distributes space, pushing content apart */
+        flex-grow: 1; /* Allows card body to grow and fill available space */
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Website Portofolio</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang Saya</a></li>
+          <li class="nav-item"><a class="nav-link" href="Galery.html">Galery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="portofolio.html">Portofolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="Sertifikat.html">Sertifikat</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container py-5">
+      <h2 class="text-center mb-5" data-aos="fade-down">Proyek Saya</h2>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100">
+            <img src="projek.png" class="card-img-top" alt="Produk Herbal">
+            <div class="card-body">
+              <h5 class="card-title">Produk herbal alami</h5>
+              <p class="card-text">
+                Produk kami terbuat dari bahan alami yang berkualitas. Kami yakin bahwa kesehatan adalah investasi terbaik, dan kami berusaha untuk memberikan produk yang dapat membantu Anda lebih sehat dan bugar.
+              </p>
+              <a href="https://kiellllla.github.io/kelompok1punya/" target="_blank" class="mt-auto">Lihat Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100">
+            <img src="elon.jpg" class="card-img-top" alt="Produk Herbal">
+            <div class="card-body">
+              <h5 class="card-title">Project Elon Musk</h5>
+              <p class="card-text">
+                SpaceX akan memulai misi tanpa awak ke Mars pada 2026, dengan misi berawak direncanakan empat tahun kemudian.
+              </p>
+              <a href="https://www.merdeka.com/teknologi/elon-musk-mau-meluncurkan-roket-starship-ke-mars-2026-193768-mvk.html " target="_blank" class="mt-auto">Lihat Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card h-100">
+              <img src="ikn.webp" class="card-img-top" alt="Produk Herbal">
+              <div class="card-body">
+                <h5 class="card-title">Proyek Di IKN</h5>
+                <p class="card-text">
+                  Ibu Kota Nusantara akan dibangun untuk mencapai target Indonesia sebagai negara maju, sesuai Visi Indonesia 2045. Dibangun dengan identitas nasional, IKN akan mengubah orientasi pembangunan menjadi Indonesia-sentris, serta mempercepat Transformasi Ekonomi Indonesia.
+                </p>
+                <a href="https://ikn.go.id/tentang-ikn" target="_blank" class="mt-auto">Lihat Demo</a>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-center text-white py-3">
+    <p class="mb-0">&copy; 2025 Soniadjara8. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // durasi animasi dalam ms
+      once: true      // animasi hanya sekali
+    });
+  </script>
+</body>
+</html>
